@@ -1,8 +1,8 @@
 module.exports = {
     presets: [["@vue/app",
         {
-            useBuiltIns: false,
+            //useBuiltIns: false,
         }
     ]],
-    //"plugins": ["@babel/plugin-transform-modules-commonjs"]
+    "plugins": ["@babel/plugin-transform-modules-commonjs"]
 };

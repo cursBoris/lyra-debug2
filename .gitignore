@@ -40,3 +40,5 @@ security/target/
 selenium-debug.log
 
 !.mvn/wrapper/maven-wrapper.jar
+
+backend/src/main/resources/application.yml

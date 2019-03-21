@@ -22,7 +22,7 @@
         <spring.boot.version>2.0.6.RELEASE</spring.boot.version>
         <spring.boot.websocket.version>2.0.6.RELEASE</spring.boot.websocket.version>
         <spring.boot.starter.celesta.version>2.0.1</spring.boot.starter.celesta.version>
-        <celesta.version>7.0.14</celesta.version>
+        <celesta.version>7.1.00</celesta.version>
         <!-- plugins -->
         <maven-compiller-plugin.version>3.7.0</maven-compiller-plugin.version>
         <maven-surefire-plugin.version>2.22.0</maven-surefire-plugin.version>
@@ -122,17 +122,13 @@
                 <groupId>ru.curs</groupId>
                 <artifactId>celesta-maven-plugin</artifactId>
                 <version>${celesta.version}</version>
-                <configuration>
-                    <scores>
-                        <score>
-                            <path>${project.basedir}/src/main/celestasql</path>
-                        </score>
-                    </scores>
-                </configuration>
                 <executions>
                     <execution>
                         <goals>
                             <goal>gen-cursors</goal>
+                            <goal>gen-score-resources</goal>
+                            <goal>gen-test-cursors</goal>
+                            <!--                            <goal>gen-test-score-resources</goal>-->
                         </goals>
                     </execution>
                 </executions>

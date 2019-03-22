@@ -7,16 +7,8 @@ module.exports = {
             '/lyra': {
                 target: 'http://localhost:8088',
                 ws: true,
-                changeOrigin: true
+                changeOrigin: false
             }
-
-            /*
-                        '/lyra': {
-                            target: 'http://localhost:8088',
-                            ws: false,
-                            changeOrigin: false
-                        }
-            */
         }
     },
 

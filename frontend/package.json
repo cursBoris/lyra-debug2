@@ -6,6 +6,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "cache:clean": "npm cache clean --force",
     "inspect:dev": "vue-cli-service inspect",
     "inspect:prod": "vue-cli-service inspect  --mode production"
   },

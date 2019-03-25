@@ -38,8 +38,8 @@ public class P1MainLyra extends BasicGridForm<Street4Cursor> {
         //First, we add to the form all the table's fields in the order they declared in SQL
         createAllBoundFields();
 
-        getFieldsMeta().get("name").setCssStyle("font-size:1em;white-space:nowrap;width:300px;text-align:left;");
-        //getFieldsMeta().get("name").setCssStyle("white-space:nowrap;");
+        //getFieldsMeta().get("name").setCssStyle("font-size:1em;white-space:nowrap;width:300px;text-align:left;");
+        getFieldsMeta().get("name").setCssStyle("white-space:nowrap;width:300px;text-align:left;");
 
         //Add a field to a form with default attributes (inherited from CelestaDoc or chosen by default)
         createField("field1");
@@ -50,7 +50,8 @@ public class P1MainLyra extends BasicGridForm<Street4Cursor> {
         f.setCaption("Unbound поле2");
         //f.setCaption("Unbound поле Unbound поле Unbound поле Unbound поле Unbound полеUnbound поле Unbound поле 2");
         f.setVisible(true);
-        f.setCssStyle("font-size:1em;white-space:nowrap;width:300px;text-align:center;");
+        //f.setCssStyle("font-size:1em;white-space:nowrap;width:300px;text-align:center;");
+        f.setCssStyle("white-space:nowrap;width:300px;text-align:center;");
         //f.setCssStyle("width:300px;text-align:center;");
 
 
@@ -61,7 +62,9 @@ public class P1MainLyra extends BasicGridForm<Street4Cursor> {
 
     @FormField(caption = "Unbound поле1",
             visible = true,
-            cssStyle = "font-size:1em;white-space:nowrap;width:320px;text-align:center;")
+            //cssStyle = "font-size:1em;white-space:nowrap;width:320px;text-align:center;"
+            cssStyle = "white-space:nowrap;width:320px;text-align:center;"
+    )
     public String getField1(CallContext ctx) {
         return "поле1_" + rec().getName();
     }

@@ -7,24 +7,19 @@ create table street4(
 	name varchar(40) NOT NULL,
 
 /**
- {"cssStyle": "font-size:1em;white-space:nowrap;width:100px;text-align:right;"}
+ {"cssStyle": "white-space:nowrap;width:100px;text-align:right;"}
  */
     rnum int NOT NULL,
 
 	code varchar(17) NOT NULL PRIMARY KEY,
-	--code varchar(17) NOT NULL,
-	--CONSTRAINT pk_street4 PRIMARY KEY (code, rnum),
 
 	socr varchar(10) NOT NULL,
-	--index varchar(6) NOT NULL,
 	gninmb varchar(4) NOT NULL,
 /**
  {"visible": false}
  */
 	uno varchar(4) NOT NULL,
 	ocatd varchar(11) NOT NULL
-
-
 );
 
 

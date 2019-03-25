@@ -96,7 +96,7 @@
             lyraGrid: () => import('lyra-grid/LyraGrid')
         },
 
-        name: 'p2mainvue',
+        name: 'P2MainVue',
 
         data() {
             return {

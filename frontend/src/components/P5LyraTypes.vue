@@ -25,7 +25,7 @@
         },
 
 
-        name: 'p5lyratypes',
+        name: 'P5LyraTypes',
 
 
         data() {

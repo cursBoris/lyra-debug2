@@ -21,7 +21,7 @@
             lyraGrid: () => import('lyra-grid/LyraGrid')
         },
 
-        name: 'p7profiles',
+        name: 'P7Profiles',
 
         data() {
             return {}

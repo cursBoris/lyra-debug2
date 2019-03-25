@@ -21,7 +21,7 @@
             lyraGrid: () => import('lyra-grid/LyraGrid')
         },
 
-        name: 'p8cssrow',
+        name: 'P8CssRow',
 
         data() {
             return {}

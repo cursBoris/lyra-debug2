@@ -22,7 +22,7 @@
             lyraGrid: () => import('lyra-grid/LyraGrid')
         },
 
-        name: 'p6showcasetypes',
+        name: 'P6ShowcaseTypes',
 
         data() {
             return {}

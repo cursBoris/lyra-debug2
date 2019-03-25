@@ -36,7 +36,7 @@
             lyraGrid: () => import('lyra-grid/LyraGrid')
         },
 
-        name: 'p1mainlyra',
+        name: 'P1MainLyra',
 
         data() {
             return {

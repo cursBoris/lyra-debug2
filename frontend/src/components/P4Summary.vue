@@ -21,7 +21,7 @@
             lyraGrid: () => import('lyra-grid/LyraGrid')
         },
 
-        name: 'p4summary',
+        name: 'P4Summary',
 
         data() {
             return {}

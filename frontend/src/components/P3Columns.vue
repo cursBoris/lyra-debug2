@@ -50,7 +50,7 @@
             lyraGrid: () => import('lyra-grid/LyraGrid')
         },
 
-        name: 'p3columns',
+        name: 'P3Columns',
 
         data() {
             return {

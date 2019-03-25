@@ -45,7 +45,7 @@
                 formclass="ru.curs.demo.P2MainVue"
                 instanceid="grid1"
 
-                context='{"part1": "part1","part2": "part2","refreshParams": {"selectKey": "","sort": "gninmb","filter": ""}}'
+                context='{"part1": "part1","part2": "part2","refreshParams": {"selectKey": "","sort": "gninmb,code","filter": ""}}'
 
                 v-on:select="select1"
                 v-on:dblclick="dblclicked1"

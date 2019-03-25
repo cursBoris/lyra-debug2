@@ -56,7 +56,8 @@ public class P4Summary extends BasicGridForm<Street4Cursor> {
 
         JSONObject sum = new JSONObject();
 
-        sum.put("name", "NAME");
+        //sum.put("name", "NAME");
+        sum.put("name", "One two three four five six seven eight nine ten One two three four five six seven eight nine ten");
         sum.put("rnum", "RNUM");
         sum.put("code", "CODE");
         sum.put("socr", "SOCR");

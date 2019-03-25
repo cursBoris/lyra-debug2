@@ -40,21 +40,21 @@ public class P5LyraTypes extends BasicGridForm<Street4Cursor> {
 
     @FormField(caption = "VARCHAR",
             visible = true,
-            cssStyle = "font-size:1em;white-space:nowrap;width:100px;text-align:left;")
+            cssStyle = "white-space:nowrap;width:100px;text-align:left;")
     public String getField1(CallContext ctx) {
         return rec().getName();
     }
 
     @FormField(caption = "INT",
             visible = true,
-            cssStyle = "font-size:1em;white-space:nowrap;width:50px;text-align:right;")
+            cssStyle = "white-space:nowrap;width:50px;text-align:right;")
     public int getField2(CallContext ctx) {
         return rec().getRnum();
     }
 
     @FormField(caption = "BIT",
             visible = true,
-            cssStyle = "font-size:1em;white-space:nowrap;width:50px;text-align:right;")
+            cssStyle = "white-space:nowrap;width:50px;text-align:right;")
     public boolean getField3(CallContext ctx) {
         return true;
     }
@@ -62,7 +62,7 @@ public class P5LyraTypes extends BasicGridForm<Street4Cursor> {
 
     @FormField(caption = "REAL_1",
             visible = true,
-            cssStyle = "font-size:1em;white-space:nowrap;width:100px;text-align:right;",
+            cssStyle = "white-space:nowrap;width:100px;text-align:right;",
             scale = 1)
     public double getField41(CallContext ctx) {
         return rec().getRnum() + 0.1234567;
@@ -70,7 +70,7 @@ public class P5LyraTypes extends BasicGridForm<Street4Cursor> {
 
     @FormField(caption = "REAL_3",
             visible = true,
-            cssStyle = "font-size:1em;white-space:nowrap;width:100px;text-align:right;",
+            cssStyle = "white-space:nowrap;width:100px;text-align:right;",
             scale = 3,
             decimalSeparator = ".",
             groupingSeparator = "")
@@ -81,7 +81,7 @@ public class P5LyraTypes extends BasicGridForm<Street4Cursor> {
 
     @FormField(caption = "DATETIME_SHORT",
             visible = true,
-            cssStyle = "font-size:1em;white-space:nowrap;width:70px;text-align:center;",
+            cssStyle = "white-space:nowrap;width:70px;text-align:center;",
             dateFormat = SHORT)
     public Date getField51(CallContext ctx) {
         return Date.from(LocalDateTime.now().atZone(ZoneId.systemDefault()).toInstant());
@@ -89,7 +89,7 @@ public class P5LyraTypes extends BasicGridForm<Street4Cursor> {
 
     @FormField(caption = "DATETIME_MEDIUM",
             visible = true,
-            cssStyle = "font-size:1em;white-space:nowrap;width:100px;text-align:center;",
+            cssStyle = "white-space:nowrap;width:100px;text-align:center;",
             dateFormat = MEDIUM)
     public Date getField52(CallContext ctx) {
         return Date.from(LocalDateTime.now().atZone(ZoneId.systemDefault()).toInstant());
@@ -97,7 +97,7 @@ public class P5LyraTypes extends BasicGridForm<Street4Cursor> {
 
     @FormField(caption = "DATETIME_LONG",
             visible = true,
-            cssStyle = "font-size:1em;white-space:nowrap;width:150px;text-align:center;",
+            cssStyle = "white-space:nowrap;width:150px;text-align:center;",
             dateFormat = LONG)
     public Date getField53(CallContext ctx) {
         return Date.from(LocalDateTime.now().atZone(ZoneId.systemDefault()).toInstant());
@@ -105,7 +105,7 @@ public class P5LyraTypes extends BasicGridForm<Street4Cursor> {
 
     @FormField(caption = "DATETIME_FULL",
             visible = true,
-            cssStyle = "font-size:1em;white-space:nowrap;width:150px;text-align:center;",
+            cssStyle = "white-space:nowrap;width:150px;text-align:center;",
             dateFormat = FULL)
     public Date getField54(CallContext ctx) {
         return Date.from(LocalDateTime.now().atZone(ZoneId.systemDefault()).toInstant());

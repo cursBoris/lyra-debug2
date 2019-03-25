@@ -25,25 +25,25 @@ public class P7Profiles extends BasicGridForm<Street4Cursor> {
         super(c);
 
         LyraFormField f = createField("name");
-        f.setCssStyle("font-size:1em;white-space:nowrap;width:400px;text-align:center;;color: white;background-color: cadetblue;");
+        f.setCssStyle("white-space:nowrap;width:400px;text-align:center;color: white;background-color: cadetblue;");
 
         f = createField("rnum");
-        f.setCssStyle("font-size:1em;white-space:nowrap;width:100px;text-align:center;color: blueviolet;background-color: red;");
+        f.setCssStyle("white-space:nowrap;width:100px;text-align:center;color: blueviolet;background-color: red;");
 
         f = createField("code");
-        f.setCssStyle("font-size:1em;white-space:nowrap;width:100px;text-align:center;color: blueviolet;background-color: orange;");
+        f.setCssStyle("white-space:nowrap;width:100px;text-align:center;color: blueviolet;background-color: orange;");
 
         f = createField("socr");
-        f.setCssStyle("font-size:1em;white-space:nowrap;width:100px;text-align:center;color: blueviolet;background-color: black;");
+        f.setCssStyle("white-space:nowrap;width:100px;text-align:center;color: blueviolet;background-color: black;");
 
         f = createField("gninmb");
-        f.setCssStyle("font-size:1em;white-space:nowrap;width:100px;text-align:center;color: blueviolet;background-color: red;");
+        f.setCssStyle("white-space:nowrap;width:100px;text-align:center;color: blueviolet;background-color: red;");
 
         f = createField("uno");
-        f.setCssStyle("font-size:1em;white-space:nowrap;width:100px;text-align:center;color: blueviolet;background-color: orange;");
+        f.setCssStyle("white-space:nowrap;width:100px;text-align:center;color: blueviolet;background-color: orange;");
 
         f = createField("ocatd");
-        f.setCssStyle("font-size:1em;white-space:nowrap;width:100px;text-align:center;color: blueviolet;background-color: cadetblue;");
+        f.setCssStyle("white-space:nowrap;width:100px;text-align:center;color: blueviolet;background-color: cadetblue;");
 
 
         //createAllBoundFields();

@@ -26,19 +26,15 @@ public class P1MainLyra extends BasicGridForm<Street4Cursor> {
 
 /*
         this.params = params;
-
         System.out.println("CCCCCCCCCCCCCCCC44.P1MainLyra");
         if (params != null) {
             System.out.println(params.getClientParams());
         }
-
 */
-
 
         //First, we add to the form all the table's fields in the order they declared in SQL
         createAllBoundFields();
 
-        //getFieldsMeta().get("name").setCssStyle("font-size:1em;white-space:nowrap;width:300px;text-align:left;");
         getFieldsMeta().get("name").setCssStyle("white-space:nowrap;width:300px;text-align:left;");
 
         //Add a field to a form with default attributes (inherited from CelestaDoc or chosen by default)
@@ -48,21 +44,15 @@ public class P1MainLyra extends BasicGridForm<Street4Cursor> {
         LyraFormField f = createField("field2");
         f.setType(LyraFieldType.VARCHAR);
         f.setCaption("Unbound поле2");
-        //f.setCaption("Unbound поле Unbound поле Unbound поле Unbound поле Unbound полеUnbound поле Unbound поле 2");
         f.setVisible(true);
-        //f.setCssStyle("font-size:1em;white-space:nowrap;width:300px;text-align:center;");
         f.setCssStyle("white-space:nowrap;width:300px;text-align:center;");
-        //f.setCssStyle("width:300px;text-align:center;");
-
 
         //      createAllUnboundFields();
-
 
     }
 
     @FormField(caption = "Unbound поле1",
             visible = true,
-            //cssStyle = "font-size:1em;white-space:nowrap;width:320px;text-align:center;"
             cssStyle = "white-space:nowrap;width:320px;text-align:center;"
     )
     public String getField1(CallContext ctx) {

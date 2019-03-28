@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.5.1",
-    "@vue/cli-service": "^3.5.1",
+    "@vue/cli-service": "^3.5.2",
     "ajv": "^6.10.0",
     "@babel/core": "^7.4.0",
     "node-sass": "^4.11.0",

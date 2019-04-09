@@ -71,7 +71,6 @@ public class P1MainLyra extends BasicGridForm<Street4Cursor> {
 
         Street4Cursor c = new Street4Cursor(callContext);
 
-
         System.out.println("LLLLLLLLLLLLLLL44.getCursor");
         if (params != null) {
             System.out.println(params.getClientParams());
@@ -87,6 +86,8 @@ public class P1MainLyra extends BasicGridForm<Street4Cursor> {
             //c.orderBy("name", "code");
             //c.orderBy("name");
             //c.orderBy("rnum");
+
+            //c.setRange("rnum", 1, 68);
 
             getFormProperties().setFooter("<h5>refreshParams: " + refreshParams.toString() + ", date: " + LocalDateTime.now() + "</h5>");
         }

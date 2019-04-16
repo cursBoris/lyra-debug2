@@ -46,8 +46,9 @@
         <dependency>
             <groupId>ru.curs</groupId>
             <artifactId>lyra</artifactId>
-            <version>1.0.2-SNAPSHOT</version>
+            <version>${lyra.version}</version>
         </dependency>
+
 
 
         <dependency>

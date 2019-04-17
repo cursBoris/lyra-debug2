@@ -87,7 +87,11 @@ public class P1MainLyra extends BasicGridForm<Street4Cursor> {
             //c.orderBy("name");
             //c.orderBy("rnum");
 
+
             //c.setRange("rnum", 1, 68);
+            //c.setRange("rnum", 7, 10);
+            //c.setRange("rnum", -1, -5);
+
 
             getFormProperties().setFooter("<h5>refreshParams: " + refreshParams.toString() + ", date: " + LocalDateTime.now() + "</h5>");
         }

@@ -9,6 +9,8 @@ import ru.curs.lyra.kernel.annotations.LyraForm;
 import ru.curs.lyra.service.FormInstantiationParameters;
 
 import java.time.LocalDateTime;
+import java.util.HashMap;
+import java.util.Map;
 
 @LyraForm(gridWidth = "95%", gridHeight = "470px",
         gridHeader = "<h5>Задание css для строки грида</h5>")
@@ -55,14 +57,10 @@ public class P8CssRow extends BasicGridForm<Street4Cursor> {
 
 
     @FormField
-    public String getRecordProperties(CallContext callContext) {
-
-        JSONObject prop = new JSONObject();
-
+    public Map<String, Object> getRecordProperties(CallContext callContext) {
+        Map<String, Object> prop = new HashMap<>();
         prop.put("rowstyle", "jslivegrid-record-bold jslivegrid-record-italic");
-
-        return prop.toString();
-
+        return prop;
     }
 
 

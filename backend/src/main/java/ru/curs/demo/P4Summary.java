@@ -8,6 +8,8 @@ import ru.curs.lyra.kernel.annotations.LyraForm;
 import ru.curs.lyra.service.FormInstantiationParameters;
 
 import java.time.LocalDateTime;
+import java.util.HashMap;
+import java.util.Map;
 
 @LyraForm(gridWidth = "95%", gridHeight = "470px",
         gridHeader = "<h5>Итоговая строка</h5>")
@@ -52,10 +54,8 @@ public class P4Summary extends BasicGridForm<Street4Cursor> {
     }
 
     @Override
-    public String getSummaryRow() {
-
-        JSONObject sum = new JSONObject();
-
+    public Map<String, String> getSummaryRow() {
+        Map<String, String> sum = new HashMap<>();
         //sum.put("name", "NAME");
         sum.put("name", "One two three four five six seven eight nine ten One two three four five six seven eight nine ten");
         sum.put("rnum", "RNUM");
@@ -64,9 +64,7 @@ public class P4Summary extends BasicGridForm<Street4Cursor> {
         sum.put("gninmb", "GNINMB");
         sum.put("ocatd", "OCATD");
         sum.put("uno", "UNO");
-
-        return sum.toString();
-
+        return sum;
     }
 
 

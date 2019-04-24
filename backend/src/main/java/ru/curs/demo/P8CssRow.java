@@ -1,11 +1,11 @@
 package ru.curs.demo;
 
 import ru.curs.celesta.CallContext;
+import ru.curs.lyra.dto.FormInstantiationParams;
 import ru.curs.lyra.kernel.BasicGridForm;
 import ru.curs.lyra.kernel.annotations.FormField;
 import ru.curs.lyra.kernel.annotations.FormParams;
 import ru.curs.lyra.kernel.annotations.LyraForm;
-import ru.curs.lyra.service.FormInstantiationParameters;
 
 import java.time.LocalDateTime;
 import java.util.HashMap;
@@ -16,7 +16,7 @@ import java.util.Map;
 public class P8CssRow extends BasicGridForm<Street4Cursor> {
 
     @FormParams
-    private FormInstantiationParameters params = null;
+    private FormInstantiationParams params = null;
 
     //Constructor will be run only once: each form is a Spring's singleton Component
     public P8CssRow(CallContext c) {

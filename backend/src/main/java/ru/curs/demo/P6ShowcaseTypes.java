@@ -1,10 +1,10 @@
 package ru.curs.demo;
 
 import ru.curs.celesta.CallContext;
+import ru.curs.lyra.dto.FormInstantiationParams;
 import ru.curs.lyra.kernel.BasicGridForm;
 import ru.curs.lyra.kernel.annotations.FormParams;
 import ru.curs.lyra.kernel.annotations.LyraForm;
-import ru.curs.lyra.service.FormInstantiationParameters;
 
 import java.time.LocalDateTime;
 import java.util.Map;
@@ -13,7 +13,7 @@ import java.util.Map;
 public class P6ShowcaseTypes extends BasicGridForm<WebsitesVueCursor> {
 
     @FormParams
-    private FormInstantiationParameters params = null;
+    private FormInstantiationParams params = null;
 
     //Constructor will be run only once: each form is a Spring's singleton Component
     public P6ShowcaseTypes(CallContext c) {

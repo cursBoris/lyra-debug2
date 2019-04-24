@@ -1,6 +1,5 @@
 package ru.curs.demo;
 
-import org.json.JSONObject;
 import ru.curs.celesta.CallContext;
 import ru.curs.lyra.kernel.BasicGridForm;
 import ru.curs.lyra.kernel.LyraFieldType;
@@ -11,6 +10,7 @@ import ru.curs.lyra.kernel.annotations.LyraForm;
 import ru.curs.lyra.service.FormInstantiationParameters;
 
 import java.time.LocalDateTime;
+import java.util.Map;
 
 @LyraForm(gridWidth = "95%", gridHeight = "470px",
         gridHeader = "<h5>Это хедер лира-грида</h5>",
@@ -75,14 +75,13 @@ public class P1MainLyra extends BasicGridForm<Street4Cursor> {
         if (params != null) {
             System.out.println(params.getClientParams());
 
-            JSONObject refreshParams = (JSONObject) (new JSONObject(params.getClientParams().get("context"))).get("refreshParams");
+            Map<String, Object> refreshParams = (Map<String, Object>) params.getClientParams().get("refreshParams");
             String sort = (String) refreshParams.get("sort");
             System.out.println(sort);
 
             String[] names = sort.split(",");
 
             c.orderBy(names);
-
             //c.orderBy("name", "code");
             //c.orderBy("name");
             //c.orderBy("rnum");

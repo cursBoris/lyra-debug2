@@ -1,6 +1,5 @@
 package ru.curs.demo;
 
-import org.json.JSONObject;
 import ru.curs.celesta.CallContext;
 import ru.curs.lyra.kernel.BasicGridForm;
 import ru.curs.lyra.kernel.annotations.FormField;
@@ -11,6 +10,7 @@ import ru.curs.lyra.service.FormInstantiationParameters;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.Date;
+import java.util.Map;
 
 import static java.text.DateFormat.*;
 
@@ -122,7 +122,7 @@ public class P5LyraTypes extends BasicGridForm<Street4Cursor> {
         if (params != null) {
             System.out.println(params.getClientParams());
 
-            JSONObject refreshParams = (JSONObject) (new JSONObject(params.getClientParams().get("context"))).get("refreshParams");
+            Map<String, Object> refreshParams = (Map<String, Object>) params.getClientParams().get("refreshParams");
             String sort = (String) refreshParams.get("sort");
             System.out.println(sort);
 

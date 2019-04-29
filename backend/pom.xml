@@ -44,13 +44,11 @@
         </dependency>
 
 
-        <!--
-                <dependency>
-                    <groupId>ru.curs</groupId>
-                    <artifactId>lyra</artifactId>
-                    <version>${lyra.version}</version>
-                </dependency>
-        -->
+        <dependency>
+            <groupId>ru.curs</groupId>
+            <artifactId>lyra</artifactId>
+            <version>${lyra.version}</version>
+        </dependency>
 
 
         <dependency>

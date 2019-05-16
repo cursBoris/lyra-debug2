@@ -17,6 +17,8 @@ public class P2MainVue extends BasicGridForm<Street4Cursor> {
     @FormParams
     private FormInstantiationParams params = null;
 
+    private String oldSort;
+
     //Constructor will be run only once: each form is a Spring's singleton Component
     public P2MainVue(CallContext c) {
         super(c);
@@ -38,9 +40,17 @@ public class P2MainVue extends BasicGridForm<Street4Cursor> {
             String sort = (String) refreshParams.get("sort");
             System.out.println(sort);
 
-            String[] names = sort.split(",");
+            if (sort.isEmpty()) {
+                if (!oldSort.isEmpty()) {
+                    String[] names = oldSort.split(",");
+                    c.orderBy(names);
+                }
+            } else {
+                String[] names = sort.split(",");
+                c.orderBy(names);
 
-            c.orderBy(names);
+                oldSort = sort;
+            }
 
             //c.orderBy("name", "code");
             //c.orderBy("name");

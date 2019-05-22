@@ -12,8 +12,6 @@ import java.time.ZoneId;
 import java.util.Date;
 import java.util.Map;
 
-import static java.text.DateFormat.*;
-
 @LyraForm(gridWidth = "95%", gridHeight = "470px",
         gridHeader = "<h5>'Лира' типы столбцов, Unbound столбцы</h5>")
 public class P5LyraTypes extends BasicGridForm<Street4Cursor> {
@@ -33,7 +31,6 @@ public class P5LyraTypes extends BasicGridForm<Street4Cursor> {
         createField("field51");
         createField("field52");
         createField("field53");
-        createField("field54");
 
 //        createAllUnboundFields();
     }
@@ -79,35 +76,27 @@ public class P5LyraTypes extends BasicGridForm<Street4Cursor> {
     }
 
 
-    @FormField(caption = "DATETIME_SHORT",
+    @FormField(caption = "DATETIME",
             visible = true,
-            cssStyle = "white-space:nowrap;width:70px;text-align:center;",
-            dateFormat = SHORT)
+            cssStyle = "white-space:nowrap;width:150px;text-align:center;",
+            dateFormat = "yyyy.MM.dd G 'at' HH:mm:ss z")
     public Date getField51(CallContext ctx) {
         return Date.from(LocalDateTime.now().atZone(ZoneId.systemDefault()).toInstant());
     }
 
-    @FormField(caption = "DATETIME_MEDIUM",
+    @FormField(caption = "DATE",
             visible = true,
-            cssStyle = "white-space:nowrap;width:100px;text-align:center;",
-            dateFormat = MEDIUM)
+            cssStyle = "white-space:nowrap;width:70px;text-align:center;",
+            dateFormat = "dd.MM.yyyy")
     public Date getField52(CallContext ctx) {
         return Date.from(LocalDateTime.now().atZone(ZoneId.systemDefault()).toInstant());
     }
 
-    @FormField(caption = "DATETIME_LONG",
+    @FormField(caption = "TIME",
             visible = true,
-            cssStyle = "white-space:nowrap;width:150px;text-align:center;",
-            dateFormat = LONG)
+            cssStyle = "white-space:nowrap;width:70px;text-align:center;",
+            dateFormat = "HH:mm:ss")
     public Date getField53(CallContext ctx) {
-        return Date.from(LocalDateTime.now().atZone(ZoneId.systemDefault()).toInstant());
-    }
-
-    @FormField(caption = "DATETIME_FULL",
-            visible = true,
-            cssStyle = "white-space:nowrap;width:150px;text-align:center;",
-            dateFormat = FULL)
-    public Date getField54(CallContext ctx) {
         return Date.from(LocalDateTime.now().atZone(ZoneId.systemDefault()).toInstant());
     }
 

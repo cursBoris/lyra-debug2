@@ -14,7 +14,9 @@ create table street4(
 	code varchar(17) NOT NULL PRIMARY KEY,
 
 	socr varchar(10) NOT NULL,
+
 	gninmb varchar(4) NOT NULL,
+
 /**
  {"visible": false}
  */

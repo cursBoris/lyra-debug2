@@ -46,6 +46,7 @@ public class P1MainLyra extends BasicGridForm<Street4Cursor> {
         f.setCaption("Unbound поле2");
         f.setVisible(true);
         f.setCssStyle("white-space:nowrap;width:300px;text-align:center;");
+        f.setSortable(false);
 
         //      createAllUnboundFields();
 
@@ -53,7 +54,8 @@ public class P1MainLyra extends BasicGridForm<Street4Cursor> {
 
     @FormField(caption = "Unbound поле1",
             visible = true,
-            cssStyle = "white-space:nowrap;width:320px;text-align:center;"
+            cssStyle = "white-space:nowrap;width:320px;text-align:center;",
+            sortable = false
     )
     public String getField1(CallContext ctx) {
         return "поле1_" + rec().getName();

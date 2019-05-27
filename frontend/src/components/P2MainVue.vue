@@ -35,18 +35,13 @@
 
     <p></p>
 
-    <!--
-        context  = '{"part1": "part1","part2": "part2","refreshParams": {"selectKey": "","sort": "name desc,code desc","filter": "filter conditions"}}'
-        context  = '{"part1": "part1","part2": "part2"}'
-    -->
-
 
     <lyra-grid ref="lyraGrid1"
 
                formclass="ru.curs.demo.P2MainVue"
                instanceid="grid1"
 
-               context='{"part1": "part1","part2": "part2","refreshParams": {"selectKey": "","sort": "gninmb,code","filter": ""}}'
+               :context="getInitContext1()"
 
                v-on:select="select1"
                v-on:dblclick="dblclicked1"
@@ -62,7 +57,7 @@
                formclass="ru.curs.demo.P2MainVue"
                instanceid="grid2"
 
-               context='{"part1": "part1","part2": "part2","refreshParams": {"selectKey": "","sort": "code","filter": "filter conditions"}}'
+               :context="getInitContext2()"
 
                v-on:select="select2"
                v-on:dblclick="dblclicked2"
@@ -79,7 +74,7 @@
                formclass="ru.curs.demo.P2MainVue"
                instanceid="grid3"
 
-               context='{"part1": "part1","part2": "part2","refreshParams": {"selectKey": "","sort": "name,code","filter": "filter conditions"}}'
+               :context="getInitContext3()"
 
                v-on:select="select3"
                v-on:dblclick="dblclicked3"
@@ -123,60 +118,103 @@ export default {
         }
     },
     methods: {
+
+        getInitContext1: function () {
+            return {
+                part1: "part1",
+                part2: "part2",
+                refreshParams:
+                    {
+                        //selectKey: "",
+                        sort: "gninmb,code",
+                        filter: ""
+                    }
+            }
+        },
+        getInitContext2: function () {
+            return {
+                part1: "part1",
+                part2: "part2",
+                refreshParams:
+                    {
+                        //selectKey: "",
+                        sort: "code",
+                        filter: "filter conditions"
+                    }
+            }
+        },
+        getInitContext3: function () {
+            return {
+                part1: "part1",
+                part2: "part2",
+                refreshParams:
+                    {
+                        //selectKey: "",
+                        sort: "name,code",
+                        filter: "filter conditions"
+                    }
+            }
+        },
+
+
         refresh1: function () {
             this.$refs.lyraGrid1.$emit(
                 'refresh',
-                '{' +
-                '	"part1": "part1",' +
-                '	"part2": "part2",' +
 
-                '	"refreshParams": {' +
-                //74000004000079300
-                '		"selectKey": "",' +
-                '		"sort": "name,code",' +
-                //'		"sort": "ocatd",' +
-                '		"filter": ""' +
-                '	}' +
-                '}'
+                {
+                    part1: "part1",
+                    part2: "part2",
+                    refreshParams:
+                        {
+                            //74000004000079300
+                            //selectKey: "",
+                            sort: "name,code",
+                            //sort: "ocatd"
+                            filter: ""
+                        }
+                }
             );
         },
         refresh2: function () {
             this.$refs.lyraGrid2.$emit(
                 'refresh',
-                '{' +
-                '	"part1": "part1",' +
-                '	"part2": "part2",' +
 
-                '	"refreshParams": {' +
-                //74000004000079300
-                '		"selectKey": "",' +
-                //'		"sort": "name,code",'+
-                '		"sort": "gninmb",' +
-                '		"filter": "filter conditions"' +
-                '	}' +
-                '}'
+
+                {
+                    part1: "part1",
+                    part2: "part2",
+                    refreshParams:
+                        {
+                            //74000004000079300
+                            //selectKey: "",
+                            //sort: "name,code",
+                            sort: "gninmb",
+                            filter: ""
+                        }
+                }
             );
         },
         refresh3: function () {
             this.$refs.lyraGrid3.$emit(
                 'refresh',
-                '{' +
-                '	"part1": "part1",' +
-                '	"part2": "part2",' +
 
-                '	"refreshParams": {' +
-                //74000004000079300
-                '		"selectKey": "",' +
-                '		"sort": "name,code",' +
-                //'		"sort": "ocatd",'+
-                '		"filter": "filter conditions"' +
-                '	}' +
-                '}'
+                {
+                    part1: "part1",
+                    part2: "part2",
+                    refreshParams:
+                        {
+                            //74000004000079300
+                            //selectKey: "",
+                            sort: "name,code",
+                            //sort: "ocatd"
+                            filter: ""
+                        }
+                }
             );
         },
 
         refresh44: function () {
-            this.$refs.lyraGrid1.$emit('refresh', this.context);
+            this.$refs.lyraGrid1.$emit('refresh', JSON.parse(this.context));
         },
 
 

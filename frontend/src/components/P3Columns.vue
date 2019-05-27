@@ -30,7 +30,7 @@
                formclass="ru.curs.demo.P3Columns"
                instanceid="grid9"
 
-               context='{"part1": "part1","part2": "part2","refreshParams": {"selectKey": "","sort": "name,code","filter": ""}}'
+               :context="getInitContext()"
 
                v-on:columns-info="columnsInfo"
 
@@ -56,6 +56,20 @@ export default {
         }
     },
     methods: {
+
+        getInitContext: function () {
+            return {
+                part1: "part1",
+                part2: "part2",
+                refreshParams:
+                    {
+                        //selectKey: "",
+                        sort: "name,code",
+                        filter: "filter conditions"
+                    }
+            }
+        },
+
         hideColumns: function () {
             var arr = [{id: "code", visible: false}, {id: "socr", visible: false}];
             this.$refs.lyraGrid9.$emit('set-columns-visibility', arr);

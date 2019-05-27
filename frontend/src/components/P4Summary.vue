@@ -1,42 +1,55 @@
 <template>
-    <div class="p4summary">
+  <div class="p4summary">
 
 
-        <lyra-grid
-                formclass="ru.curs.demo.P4Summary"
-                instanceid="grid10"
-                context='{"part1": "part1","part2": "part2","refreshParams": {"selectKey": "","sort": "name,code","filter": ""}}'
-        >
-        </lyra-grid>
+    <lyra-grid
+            formclass="ru.curs.demo.P4Summary"
+            instanceid="grid10"
+            :context="getInitContext()"
+    >
+    </lyra-grid>
 
 
-    </div>
+  </div>
 </template>
 
 <script>
 
-    export default {
+export default {
 
-        components: {
-            lyraGrid: () => import('lyra-grid/LyraGrid')
+    components: {
+        lyraGrid: () => import('lyra-grid/LyraGrid')
+    },
+
+    name: 'P4Summary',
+
+    data() {
+        return {}
+    },
+    methods: {
+        getInitContext: function () {
+            return {
+                part1: "part1",
+                part2: "part2",
+                refreshParams:
+                    {
+                        //selectKey: "",
+                        sort: "name,code",
+                        filter: "filter conditions"
+                    }
+            }
         },
-
-        name: 'P4Summary',
-
-        data() {
-            return {}
-        },
-        methods: {}
     }
+}
 
 </script>
 
 
 <style>
-    .summary-row {
-        font-weight: bold;
+  .summary-row {
+    font-weight: bold;
 
-        color: silver;
-        background-color: blue;
-    }
+    color: silver;
+    background-color: blue;
+  }
 </style>

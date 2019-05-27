@@ -19,7 +19,7 @@
                formclass="ru.curs.demo.P1MainLyra"
                instanceid="grid1"
 
-               context='{"part1": "part1","part2": "part2","refreshParams": {"selectKey": "","sort": "name,code","filter": "filter conditions"}}'
+               :context="getInitContext()"
     >
     </lyra-grid>
 
@@ -56,8 +56,22 @@ export default {
         }
     },
     methods: {
+
+        getInitContext: function () {
+            return {
+                part1: "part1",
+                part2: "part2",
+                refreshParams:
+                    {
+                        //selectKey: "",
+                        sort: "name,code",
+                        filter: "filter conditions"
+                    }
+            }
+        },
+
         refresh442: function () {
-            this.$refs.lyraGrid1.$emit('refresh', this.context2);
+            this.$refs.lyraGrid1.$emit('refresh', JSON.parse(this.context2));
         },
     }
 }

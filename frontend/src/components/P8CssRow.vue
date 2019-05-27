@@ -1,45 +1,59 @@
 <template>
-    <div class="p8cssrow">
+  <div class="p8cssrow">
 
 
-        <lyra-grid
-                formclass="ru.curs.demo.P8CssRow"
-                instanceid="grid6"
-                context='{"part1": "part1","part2": "part2","refreshParams": {"selectKey": "","sort": "name,code","filter": ""}}'
-        >
-        </lyra-grid>
+    <lyra-grid
+            formclass="ru.curs.demo.P8CssRow"
+            instanceid="grid6"
+            :context="getInitContext()"
+    >
+    </lyra-grid>
 
 
-    </div>
+  </div>
 </template>
 
 <script>
 
-    export default {
+export default {
 
-        components: {
-            lyraGrid: () => import('lyra-grid/LyraGrid')
+    components: {
+        lyraGrid: () => import('lyra-grid/LyraGrid')
+    },
+
+    name: 'P8CssRow',
+
+    data() {
+        return {}
+    },
+    methods: {
+        getInitContext: function () {
+            return {
+                part1: "part1",
+                part2: "part2",
+                refreshParams:
+                    {
+                        //selectKey: "",
+                        sort: "name,code",
+                        filter: "filter conditions"
+                    }
+            }
         },
 
-        name: 'P8CssRow',
-
-        data() {
-            return {}
-        },
-        methods: {}
     }
+}
 
 </script>
 
 
 <style>
-    .jslivegrid-record-bold {
-        overflow: auto;
-        background-color: #87cefa;
-        font-weight: bold;
-    }
+  .jslivegrid-record-bold {
+    overflow: auto;
+    background-color: #87cefa;
+    font-weight: bold;
+  }
 
-    .jslivegrid-record-italic {
-        font-style: italic;
-    }
+  .jslivegrid-record-italic {
+    font-style: italic;
+  }
 </style>

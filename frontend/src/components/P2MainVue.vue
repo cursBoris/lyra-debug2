@@ -124,7 +124,7 @@ export default {
     },
     methods: {
         refresh1: function () {
-            this.$refs.lyraGrid1.events.$emit(
+            this.$refs.lyraGrid1.$emit(
                 'refresh',
                 '{' +
                 '	"part1": "part1",' +
@@ -141,7 +141,7 @@ export default {
             );
         },
         refresh2: function () {
-            this.$refs.lyraGrid2.events.$emit(
+            this.$refs.lyraGrid2.$emit(
                 'refresh',
                 '{' +
                 '	"part1": "part1",' +
@@ -158,7 +158,7 @@ export default {
             );
         },
         refresh3: function () {
-            this.$refs.lyraGrid3.events.$emit(
+            this.$refs.lyraGrid3.$emit(
                 'refresh',
                 '{' +
                 '	"part1": "part1",' +
@@ -176,7 +176,7 @@ export default {
         },
 
         refresh44: function () {
-            this.$refs.lyraGrid1.events.$emit('refresh', this.context);
+            this.$refs.lyraGrid1.$emit('refresh', this.context);
         },
 
 

@@ -58,11 +58,11 @@ export default {
     methods: {
         hideColumns: function () {
             var arr = [{id: "code", visible: false}, {id: "socr", visible: false}];
-            this.$refs.lyraGrid9.events.$emit('set-columns-visibility', arr);
+            this.$refs.lyraGrid9.$emit('set-columns-visibility', arr);
         },
         showColumns: function () {
             var arr = [{id: "code", visible: true}, {id: "socr", visible: true}];
-            this.$refs.lyraGrid9.events.$emit('set-columns-visibility', arr);
+            this.$refs.lyraGrid9.$emit('set-columns-visibility', arr);
         },
 
         columnsInfo: function (formClass, instanceId, obj) {

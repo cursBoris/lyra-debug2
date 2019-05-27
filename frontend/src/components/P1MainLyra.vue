@@ -57,7 +57,7 @@ export default {
     },
     methods: {
         refresh442: function () {
-            this.$refs.lyraGrid1.events.$emit('refresh', this.context2);
+            this.$refs.lyraGrid1.$emit('refresh', this.context2);
         },
     }
 }

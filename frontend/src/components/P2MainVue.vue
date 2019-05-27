@@ -41,46 +41,49 @@
     -->
 
 
-    <lyra-grid
-            formclass="ru.curs.demo.P2MainVue"
-            instanceid="grid1"
+    <lyra-grid ref="lyraGrid1"
 
-            context='{"part1": "part1","part2": "part2","refreshParams": {"selectKey": "","sort": "gninmb,code","filter": ""}}'
+               formclass="ru.curs.demo.P2MainVue"
+               instanceid="grid1"
 
-            v-on:select="select1"
-            v-on:dblclick="dblclicked1"
-            v-on:click="clicked1"
+               context='{"part1": "part1","part2": "part2","refreshParams": {"selectKey": "","sort": "gninmb,code","filter": ""}}'
 
-    >
-    </lyra-grid>
-
-    <p></p>
-
-    <lyra-grid
-            formclass="ru.curs.demo.P2MainVue"
-            instanceid="grid2"
-
-            context='{"part1": "part1","part2": "part2","refreshParams": {"selectKey": "","sort": "code","filter": "filter conditions"}}'
-
-            v-on:select="select2"
-            v-on:dblclick="dblclicked2"
-            v-on:click="clicked2"
+               v-on:select="select1"
+               v-on:dblclick="dblclicked1"
+               v-on:click="clicked1"
 
     >
     </lyra-grid>
 
     <p></p>
 
+    <lyra-grid ref="lyraGrid2"
 
-    <lyra-grid
-            formclass="ru.curs.demo.P2MainVue"
-            instanceid="grid3"
+               formclass="ru.curs.demo.P2MainVue"
+               instanceid="grid2"
 
-            context='{"part1": "part1","part2": "part2","refreshParams": {"selectKey": "","sort": "name,code","filter": "filter conditions"}}'
+               context='{"part1": "part1","part2": "part2","refreshParams": {"selectKey": "","sort": "code","filter": "filter conditions"}}'
 
-            v-on:select="select3"
-            v-on:dblclick="dblclicked3"
-            v-on:click="clicked3"
+               v-on:select="select2"
+               v-on:dblclick="dblclicked2"
+               v-on:click="clicked2"
+
+    >
+    </lyra-grid>
+
+    <p></p>
+
+
+    <lyra-grid ref="lyraGrid3"
+
+               formclass="ru.curs.demo.P2MainVue"
+               instanceid="grid3"
+
+               context='{"part1": "part1","part2": "part2","refreshParams": {"selectKey": "","sort": "name,code","filter": "filter conditions"}}'
+
+               v-on:select="select3"
+               v-on:dblclick="dblclicked3"
+               v-on:click="clicked3"
 
     >
     </lyra-grid>
@@ -90,8 +93,6 @@
 </template>
 
 <script>
-
-import {lyraGridEvents} from 'lyra-grid/LyraGrid'
 
 export default {
 
@@ -123,10 +124,8 @@ export default {
     },
     methods: {
         refresh1: function () {
-            lyraGridEvents.$emit(
+            this.$refs.lyraGrid1.events.$emit(
                 'refresh',
-                'ru.curs.demo.P2MainVue',
-                'grid1',
                 '{' +
                 '	"part1": "part1",' +
                 '	"part2": "part2",' +
@@ -142,10 +141,8 @@ export default {
             );
         },
         refresh2: function () {
-            lyraGridEvents.$emit(
+            this.$refs.lyraGrid2.events.$emit(
                 'refresh',
-                'ru.curs.demo.P2MainVue',
-                'grid2',
                 '{' +
                 '	"part1": "part1",' +
                 '	"part2": "part2",' +
@@ -161,10 +158,8 @@ export default {
             );
         },
         refresh3: function () {
-            lyraGridEvents.$emit(
+            this.$refs.lyraGrid3.events.$emit(
                 'refresh',
-                'ru.curs.demo.P2MainVue',
-                'grid3',
                 '{' +
                 '	"part1": "part1",' +
                 '	"part2": "part2",' +
@@ -181,7 +176,7 @@ export default {
         },
 
         refresh44: function () {
-            lyraGridEvents.$emit('refresh', 'ru.curs.demo.P2MainVue', 'grid1', this.context);
+            this.$refs.lyraGrid1.events.$emit('refresh', this.context);
         },
 
 

@@ -13,3 +13,17 @@ new Vue({
     router,
     render: h => h(App)
 }).$mount('#app')
+
+
+function getLyraConfig() {
+    return {
+        baseUrlMetadata: "http://localhost:8080",
+        baseUrlData: "http://localhost:8080",
+        baseUrlScrollback: "http://localhost:8080",
+    };
+}
+
+window.getLyraConfig = getLyraConfig;
+
+
+

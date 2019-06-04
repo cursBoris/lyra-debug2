@@ -17,9 +17,9 @@ new Vue({
 
 function getLyraConfig() {
     return {
-        baseUrlMetadata: "http://localhost:8080",
-        baseUrlData: "http://localhost:8080",
-        baseUrlScrollback: "http://localhost:8080",
+        baseUrlMetadata: "http://localhost:8081",
+        baseUrlData: "http://localhost:8081",
+        baseUrlScrollback: "http://localhost:8088",
     };
 }
 

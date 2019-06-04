@@ -9,7 +9,9 @@ module.exports = {
                 ws: true,
                 changeOrigin: false
             }
-        }
+        },
+
+        port: 8081
     },
 
     outputDir: 'target/dist',

@@ -3,6 +3,7 @@ package ru.curs.demo;
 import ru.curs.celesta.CallContext;
 import ru.curs.lyra.dto.FormInstantiationParams;
 import ru.curs.lyra.kernel.BasicGridForm;
+import ru.curs.lyra.kernel.GridRefinementHandler;
 import ru.curs.lyra.kernel.annotations.FormParams;
 import ru.curs.lyra.kernel.annotations.LyraForm;
 
@@ -16,8 +17,8 @@ public class P6ShowcaseTypes extends BasicGridForm<WebsitesVueCursor> {
     private FormInstantiationParams params = null;
 
     //Constructor will be run only once: each form is a Spring's singleton Component
-    public P6ShowcaseTypes(CallContext c) {
-        super(c);
+    public P6ShowcaseTypes(CallContext c, GridRefinementHandler changeNotifier) {
+        super(c, changeNotifier);
 
         createAllBoundFields();
     }

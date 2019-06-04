@@ -3,6 +3,7 @@ package ru.curs.demo;
 import ru.curs.celesta.CallContext;
 import ru.curs.lyra.dto.FormInstantiationParams;
 import ru.curs.lyra.kernel.BasicGridForm;
+import ru.curs.lyra.kernel.GridRefinementHandler;
 import ru.curs.lyra.kernel.LyraFormField;
 import ru.curs.lyra.kernel.annotations.FormParams;
 import ru.curs.lyra.kernel.annotations.LyraForm;
@@ -21,8 +22,8 @@ public class P7Profiles extends BasicGridForm<Street4Cursor> {
     private FormInstantiationParams params = null;
 
     //Constructor will be run only once: each form is a Spring's singleton Component
-    public P7Profiles(CallContext c) {
-        super(c);
+    public P7Profiles(CallContext c, GridRefinementHandler changeNotifier) {
+        super(c, changeNotifier);
 
         LyraFormField f = createField("name");
         f.setCssStyle("white-space:nowrap;width:400px;text-align:center;color: white;background-color: cadetblue;");

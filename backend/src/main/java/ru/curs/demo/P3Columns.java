@@ -3,6 +3,7 @@ package ru.curs.demo;
 import ru.curs.celesta.CallContext;
 import ru.curs.lyra.dto.FormInstantiationParams;
 import ru.curs.lyra.kernel.BasicGridForm;
+import ru.curs.lyra.kernel.GridRefinementHandler;
 import ru.curs.lyra.kernel.annotations.FormParams;
 import ru.curs.lyra.kernel.annotations.LyraForm;
 
@@ -17,8 +18,8 @@ public class P3Columns extends BasicGridForm<Street4Cursor> {
     private FormInstantiationParams params = null;
 
     //Constructor will be run only once: each form is a Spring's singleton Component
-    public P3Columns(CallContext c) {
-        super(c);
+    public P3Columns(CallContext c, GridRefinementHandler changeNotifier) {
+        super(c, changeNotifier);
 
         createAllBoundFields();
     }

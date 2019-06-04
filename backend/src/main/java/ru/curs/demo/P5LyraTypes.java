@@ -3,6 +3,7 @@ package ru.curs.demo;
 import ru.curs.celesta.CallContext;
 import ru.curs.lyra.dto.FormInstantiationParams;
 import ru.curs.lyra.kernel.BasicGridForm;
+import ru.curs.lyra.kernel.GridRefinementHandler;
 import ru.curs.lyra.kernel.annotations.FormField;
 import ru.curs.lyra.kernel.annotations.FormParams;
 import ru.curs.lyra.kernel.annotations.LyraForm;
@@ -20,8 +21,8 @@ public class P5LyraTypes extends BasicGridForm<Street4Cursor> {
     private FormInstantiationParams params = null;
 
     //Constructor will be run only once: each form is a Spring's singleton Component
-    public P5LyraTypes(CallContext c) {
-        super(c);
+    public P5LyraTypes(CallContext c, GridRefinementHandler changeNotifier) {
+        super(c, changeNotifier);
 
         createField("field1");
         createField("field2");
@@ -39,14 +40,14 @@ public class P5LyraTypes extends BasicGridForm<Street4Cursor> {
             visible = true,
             cssStyle = "white-space:nowrap;width:100px;text-align:left;")
     public String getField1(CallContext ctx) {
-        return rec().getName();
+        return rec(ctx).getName();
     }
 
     @FormField(caption = "INT",
             visible = true,
             cssStyle = "white-space:nowrap;width:50px;text-align:right;")
     public int getField2(CallContext ctx) {
-        return rec().getRnum();
+        return rec(ctx).getRnum();
     }
 
     @FormField(caption = "BIT",
@@ -62,7 +63,7 @@ public class P5LyraTypes extends BasicGridForm<Street4Cursor> {
             cssStyle = "white-space:nowrap;width:100px;text-align:right;",
             scale = 1)
     public double getField41(CallContext ctx) {
-        return rec().getRnum() + 0.1234567;
+        return rec(ctx).getRnum() + 0.1234567;
     }
 
     @FormField(caption = "REAL_3",
@@ -72,7 +73,7 @@ public class P5LyraTypes extends BasicGridForm<Street4Cursor> {
             decimalSeparator = ".",
             groupingSeparator = "")
     public double getField42(CallContext ctx) {
-        return rec().getRnum() + 0.1234567;
+        return rec(ctx).getRnum() + 0.1234567;
     }
 
 

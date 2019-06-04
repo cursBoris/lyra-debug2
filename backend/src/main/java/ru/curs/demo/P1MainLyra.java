@@ -3,6 +3,7 @@ package ru.curs.demo;
 import ru.curs.celesta.CallContext;
 import ru.curs.lyra.dto.FormInstantiationParams;
 import ru.curs.lyra.kernel.BasicGridForm;
+import ru.curs.lyra.kernel.GridRefinementHandler;
 import ru.curs.lyra.kernel.LyraFieldType;
 import ru.curs.lyra.kernel.LyraFormField;
 import ru.curs.lyra.kernel.annotations.FormField;
@@ -21,8 +22,9 @@ public class P1MainLyra extends BasicGridForm<Street4Cursor> {
     private FormInstantiationParams params = null;
 
     //Constructor will be run only once: each form is a Spring's singleton Component
-    public P1MainLyra(CallContext c/*, FormInstantiationParameters params*/) {
-        super(c);
+    public P1MainLyra(CallContext c, GridRefinementHandler changeNotifier/*, FormInstantiationParameters params*/) {
+        super(c, changeNotifier);
+
 
 /*
         this.params = params;
@@ -58,12 +60,12 @@ public class P1MainLyra extends BasicGridForm<Street4Cursor> {
             sortable = false
     )
     public String getField1(CallContext ctx) {
-        return "поле1_" + rec().getName();
+        return "поле1_" + rec(ctx).getName();
     }
 
     @FormField
     public String getField2(CallContext ctx) {
-        return "поле2_" + rec().getCode();
+        return "поле2_" + rec(ctx).getCode();
     }
 
 
@@ -119,5 +121,6 @@ public class P1MainLyra extends BasicGridForm<Street4Cursor> {
         rec().setName("dd22");
     }
 */
+
 
 }

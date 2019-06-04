@@ -3,6 +3,7 @@ package ru.curs.demo;
 import ru.curs.celesta.CallContext;
 import ru.curs.lyra.dto.FormInstantiationParams;
 import ru.curs.lyra.kernel.BasicGridForm;
+import ru.curs.lyra.kernel.GridRefinementHandler;
 import ru.curs.lyra.kernel.annotations.FormField;
 import ru.curs.lyra.kernel.annotations.FormParams;
 import ru.curs.lyra.kernel.annotations.LyraForm;
@@ -19,8 +20,8 @@ public class P8CssRow extends BasicGridForm<Street4Cursor> {
     private FormInstantiationParams params = null;
 
     //Constructor will be run only once: each form is a Spring's singleton Component
-    public P8CssRow(CallContext c) {
-        super(c);
+    public P8CssRow(CallContext c, GridRefinementHandler changeNotifier) {
+        super(c, changeNotifier);
 
         //First, we add to the form all the table's fields in the order they declared in SQL
         createAllBoundFields();

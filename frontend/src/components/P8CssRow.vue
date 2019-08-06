@@ -18,7 +18,7 @@
 export default {
 
     components: {
-        lyraGrid: () => import('lyra-grid/LyraGrid')
+        //lyraGrid: () => import('lyra-grid')
     },
 
     name: 'P8CssRow',
@@ -34,8 +34,10 @@ export default {
                 refreshParams:
                     {
                         //selectKey: "",
-                        sort: "name,code",
-                        filter: "filter conditions"
+                        sort: ["name", "code"],
+                        filter: {
+                            filter: "filter conditions",
+                        }
                     }
             }
         },
@@ -56,4 +58,18 @@ export default {
   .jslivegrid-record-italic {
     font-style: italic;
   }
+
+
+  /*
+    .fc-color-white {
+      background-color: white;
+      border-right-style: solid !important;
+      border-left-style: solid !important;
+    }
+
+    .fc-color-red {
+      background-color: red;
+    }
+  */
+
 </style>

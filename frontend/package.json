@@ -8,26 +8,29 @@
     "build": "vue-cli-service build",
     "inspect:dev": "vue-cli-service inspect",
     "inspect:prod": "vue-cli-service inspect  --mode production",
-    "cache:clean": "npm cache clean --force"
+    "cache:clean": "npm cache clean --force",
+    "lint2:fix": "eslint --fix  --no-ignore --config node_modules/lyra-grid/.eslintrc node_modules/lyra-grid/src/grid.js node_modules/lyra-grid/src/LyraGrid.vue node_modules/lyra-grid/src/store.js node_modules/lyra-grid/src/util.js"
   },
   "dependencies": {
-    "bootstrap": "^4.3.1",
-    "bootstrap-vue": "^2.0.0-rc.25",
-    "jquery": "^3.4.1",
-    "lyra-grid": "^1.1.21",
     "vue": "^2.6.10",
-    "vue-router": "^3.0.7"
+    "vue-router": "^3.0.7",
+    "bootstrap-vue": "^2.0.0-rc.27",
+    "lyra-grid": "^1.1.21",
+    "axios": "^0.19.0",
+    "deep-diff": "^1.0.2"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.9.2",
     "@vue/cli-service": "^3.9.2",
-    "ajv": "^6.10.1",
-    "@babel/core": "^7.5.0",
     "node-sass": "^4.12.0",
     "sass-loader": "^7.1.0",
     "vue-template-compiler": "^2.6.10",
     "dojo-webpack-plugin": "^2.8.9",
-    "copy-webpack-plugin": "^5.0.3"
+    "copy-webpack-plugin": "^5.0.3",
+    "babel-eslint": "^10.0.2",
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-vue": "^5.2.3"
   },
   "postcss": {
     "plugins": {

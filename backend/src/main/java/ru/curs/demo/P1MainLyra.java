@@ -11,6 +11,7 @@ import ru.curs.lyra.kernel.annotations.FormParams;
 import ru.curs.lyra.kernel.annotations.LyraForm;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Map;
 
 @LyraForm(gridWidth = "95%", gridHeight = "470px",
@@ -80,12 +81,11 @@ public class P1MainLyra extends BasicGridForm<Street4Cursor> {
             System.out.println(params.getClientParams());
 
             Map<String, Object> refreshParams = (Map<String, Object>) params.getClientParams().get("refreshParams");
-            String sort = (String) refreshParams.get("sort");
-            System.out.println(sort);
 
-            String[] names = sort.split(",");
-
+            List<String> sort = (List) refreshParams.get("sort");
+            String[] names = sort.stream().toArray(String[]::new);
             c.orderBy(names);
+
             //c.orderBy("name", "code");
             //c.orderBy("name");
             //c.orderBy("rnum");

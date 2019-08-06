@@ -5,8 +5,8 @@
     <b-form-group
             label="Events" label-for="textarea">
 
-      <b-form-textarea style="width:1150px;height:200px;"
-                       id="textarea" v-model="message" :rows="20" :max-rows="20">
+      <b-form-textarea style="width:1150px;"
+                       id="textarea" v-model="message" :rows="7" :max-rows="7">
       </b-form-textarea>
 
       <p></p>
@@ -92,7 +92,7 @@
 export default {
 
     components: {
-        lyraGrid: () => import('lyra-grid/LyraGrid')
+        //lyraGrid: () => import('lyra-grid')
     },
 
     name: 'P2MainVue',
@@ -106,12 +106,19 @@ export default {
                 '"part2": "part2",' +
 
                 '"refreshParams": {' +
+
                 //74000004000079300
                 //current
                 '"selectKey": ["74000004000079300"],' +
-                '"sort": "name,code",' +
+
+                '"sort": ["name", "code"],' +
                 //'"sort": "ocatd",'+
-                '"filter": "filter conditions"' +
+
+                '"filter": {' +
+                '"filter1": "filter conditions 1",' +
+                '"filter2": "filter conditions 2"' +
+                '}' +
+
                 '}' +
                 '}',
 
@@ -126,8 +133,10 @@ export default {
                 refreshParams:
                     {
                         //selectKey: "",
-                        sort: "gninmb,code",
-                        filter: ""
+                        sort: ["gninmb", "code"],
+                        filter: {
+                            filter: "filter conditions",
+                        }
                     }
             }
         },
@@ -138,8 +147,10 @@ export default {
                 refreshParams:
                     {
                         //selectKey: "",
-                        sort: "code",
-                        filter: "filter conditions"
+                        sort: ["code"],
+                        filter: {
+                            filter: "filter conditions",
+                        }
                     }
             }
         },
@@ -150,8 +161,10 @@ export default {
                 refreshParams:
                     {
                         //selectKey: "",
-                        sort: "name,code",
-                        filter: "filter conditions"
+                        sort: ["name", "code"],
+                        filter: {
+                            filter: "filter conditions",
+                        }
                     }
             }
         },
@@ -168,9 +181,10 @@ export default {
                         {
                             //74000004000079300
                             //selectKey: "",
-                            sort: "name,code",
-                            //sort: "ocatd"
-                            filter: ""
+                            sort: ["name", "code"],
+                            filter: {
+                                filter: "filter conditions",
+                            }
                         }
                 }
             );
@@ -178,7 +192,6 @@ export default {
         refresh2: function () {
             this.$refs.lyraGrid2.$emit(
                 'refresh',
-
 
                 {
                     part1: "part1",
@@ -188,8 +201,10 @@ export default {
                             //74000004000079300
                             //selectKey: "",
                             //sort: "name,code",
-                            sort: "gninmb",
-                            filter: ""
+                            sort: ["gninmb"],
+                            filter: {
+                                filter: "filter conditions",
+                            }
                         }
                 }
             );
@@ -205,9 +220,10 @@ export default {
                         {
                             //74000004000079300
                             //selectKey: "",
-                            sort: "name,code",
-                            //sort: "ocatd"
-                            filter: ""
+                            sort: ["name", "code"],
+                            filter: {
+                                filter: "filter conditions",
+                            }
                         }
                 }
             );

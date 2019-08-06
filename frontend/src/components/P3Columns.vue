@@ -45,7 +45,7 @@
 export default {
 
     components: {
-        lyraGrid: () => import('lyra-grid/LyraGrid')
+        //lyraGrid: () => import('lyra-grid')
     },
 
     name: 'P3Columns',
@@ -64,8 +64,10 @@ export default {
                 refreshParams:
                     {
                         //selectKey: "",
-                        sort: "name,code",
-                        filter: "filter conditions"
+                        sort: ["name", "code"],
+                        filter: {
+                            filter: "filter conditions",
+                        }
                     }
             }
         },

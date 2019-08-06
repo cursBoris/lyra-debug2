@@ -19,7 +19,7 @@
 export default {
 
     components: {
-        lyraGrid: () => import('lyra-grid/LyraGrid')
+        //lyraGrid: () => import('lyra-grid')
     },
 
     name: 'P6ShowcaseTypes',
@@ -35,8 +35,10 @@ export default {
                 refreshParams:
                     {
                         //selectKey: "",
-                        sort: "code",
-                        filter: "filter conditions"
+                        sort: ["code"],
+                        filter: {
+                            filter: "filter conditions",
+                        }
                     }
             }
         },

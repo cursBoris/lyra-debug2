@@ -32,8 +32,10 @@ module.exports = {
                 to: "dojo/resources"
             }]),
         ],
+
         optimization: {
             splitChunks: false
         },
+
     }
 }

@@ -10,6 +10,7 @@ import ru.curs.lyra.kernel.annotations.LyraForm;
 
 import java.time.LocalDateTime;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @LyraForm(gridWidth = "95%", gridHeight = "470px",
@@ -25,6 +26,14 @@ public class P8CssRow extends BasicGridForm<Street4Cursor> {
 
         //First, we add to the form all the table's fields in the order they declared in SQL
         createAllBoundFields();
+
+
+/*
+        getFieldsMeta().get("name").setCssClassName("fc-color-white");
+        getFieldsMeta().get("rnum").setCssClassName("fc-color-white");
+        getFieldsMeta().get("code").setCssClassName("fc-color-white");
+*/
+
     }
 
     @Override
@@ -38,16 +47,10 @@ public class P8CssRow extends BasicGridForm<Street4Cursor> {
             System.out.println(params.getClientParams());
 
             Map<String, Object> refreshParams = (Map<String, Object>) params.getClientParams().get("refreshParams");
-            String sort = (String) refreshParams.get("sort");
-            System.out.println(sort);
 
-            String[] names = sort.split(",");
-
+            List<String> sort = (List) refreshParams.get("sort");
+            String[] names = sort.stream().toArray(String[]::new);
             c.orderBy(names);
-
-            //c.orderBy("name", "code");
-            //c.orderBy("name");
-            //c.orderBy("rnum");
 
             getFormProperties().setFooter("<h5>refreshParams: " + refreshParams.toString() + ", date: " + LocalDateTime.now() + "</h5>");
         }
@@ -58,9 +61,18 @@ public class P8CssRow extends BasicGridForm<Street4Cursor> {
 
     @FormField
     public Map<String, Object> getRecordProperties(CallContext callContext) {
+
         Map<String, Object> prop = new HashMap<>();
         prop.put("rowstyle", "jslivegrid-record-bold jslivegrid-record-italic");
         return prop;
+
+
+/*
+        Map<String, Object> prop = new HashMap<>();
+        prop.put("rowstyle", "fc-color-red");
+        return prop;
+*/
+
     }
 
 

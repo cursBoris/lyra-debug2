@@ -5,13 +5,13 @@
     <b-form-group
             label="Events" label-for="textarea">
 
-      <b-form-textarea style="width:1150px;"
+      <b-form-textarea style="width:1350px;"
                        id="textarea" v-model="message" :rows="7" :max-rows="7">
       </b-form-textarea>
 
       <p></p>
 
-      <b-form-textarea style="width:1150px;height:50px;"
+      <b-form-textarea style="width:1350px;height:50px;"
                        id="context" v-model="context" :rows="3" :max-rows="3">
       </b-form-textarea>
 

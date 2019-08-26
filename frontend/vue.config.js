@@ -20,7 +20,7 @@ module.exports = {
     configureWebpack: {
         plugins: [
             new DojoWebpackPlugin({
-                loaderConfig: require("./node_modules/lyra-grid/loaderConfig"),
+                loaderConfig: require("./node_modules/lyra-grid/config/loaderConfig"),
                 environment: {dojoRoot: "."},	// used at run time for non-packed resources (e.g. blank.gif)
                 buildEnvironment: {dojoRoot: "node_modules"}, // used at build time
                 locales: ["en", "ru"],

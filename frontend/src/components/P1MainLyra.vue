@@ -37,7 +37,7 @@ export default {
     name: 'P1MainLyra',
 
     components: {
-        //lyraGrid: () => import('lyra-grid')
+        lyraGrid: () => import('lyra-grid')
     },
 
     data() {

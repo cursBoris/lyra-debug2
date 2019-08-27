@@ -5,14 +5,13 @@ import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
-import {Lyra} from 'lyra-grid'
-
+//import {Lyra} from 'lyra-grid'
+//Vue.use(Lyra)
 
 Vue.config.productionTip = false
 
 Vue.use(BootstrapVue)
 
-Vue.use(Lyra)
 
 new Vue({
     router,

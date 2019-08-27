@@ -19,7 +19,7 @@
 export default {
 
     components: {
-        //lyraGrid: () => import('lyra-grid')
+        lyraGrid: () => import('lyra-grid')
     },
 
     name: 'P6ShowcaseTypes',

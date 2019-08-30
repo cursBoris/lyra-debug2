@@ -15,7 +15,7 @@
     "vue": "^2.6.10",
     "vue-router": "^3.1.2",
     "bootstrap-vue": "^2.0.0-rc.28",
-    "lyra-grid": "^1.2.0-rc3"
+    "lyra-grid": "^1.2.0-rc5"
   },
   "devDependencies": {
     "@vue/cli-service": "^4.0.0-rc.0",

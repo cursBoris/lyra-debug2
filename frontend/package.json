@@ -18,8 +18,8 @@
     "lyra-grid": "^1.2.1"
   },
   "devDependencies": {
-    "@vue/cli-service": "^4.0.4",
-    "node-sass": "^4.12.0",
+    "@vue/cli-service": "^4.0.5",
+    "node-sass": "^4.13.0",
     "sass-loader": "^8.0.0",
     "vue-template-compiler": "^2.6.10",
     "dojo-webpack-plugin": "^2.8.10",

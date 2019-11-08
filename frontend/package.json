@@ -23,12 +23,12 @@
     "sass-loader": "^8.0.0",
     "vue-template-compiler": "^2.6.10",
     "dojo-webpack-plugin": "^2.8.10",
-    "copy-webpack-plugin": "^5.0.4",
+    "copy-webpack-plugin": "^5.0.5",
     "babel-eslint": "^10.0.3",
     "eslint": "^6.6.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-vue": "^5.2.3"
+    "eslint-plugin-vue": "^6.0.0"
   },
   "postcss": {
     "plugins": {

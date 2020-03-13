@@ -23,6 +23,18 @@ function getLyraConfig() {
     return {
         //baseUrl: "http://localhost:8081",
         //baseUrlScrollback: "http://localhost:8088",
+
+
+        showMessageFunction(vueComponent, message) {
+            vueComponent.$bvModal.msgBoxOk(message, {
+                title: 'Error',
+                headerClass: 'p-2 border-bottom-0',
+                footerClass: 'p-2 border-top-0',
+                centered: true,
+            });
+        }
+
+
     };
 }
 

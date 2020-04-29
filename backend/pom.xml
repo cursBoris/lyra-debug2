@@ -9,7 +9,7 @@
     <parent>
         <groupId>ru.curs</groupId>
         <artifactId>lyra-debug2</artifactId>
-        <version>1.2.0</version>
+        <version>1.2.1</version>
     </parent>
 
     <properties>
@@ -17,11 +17,11 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
         <!-- dependencies -->
-        <postgresql.version>42.2.8</postgresql.version>
+        <postgresql.version>42.2.12</postgresql.version>
         <spring.boot.version>2.1.8.RELEASE</spring.boot.version>
-        <spring.boot.starter.celesta.version>2.1.4</spring.boot.starter.celesta.version>
-        <celesta.version>7.1.7</celesta.version>
-        <lyra.version>1.2.2</lyra.version>
+        <spring.boot.starter.celesta.version>2.1.17</spring.boot.starter.celesta.version>
+        <celesta.version>7.3.6</celesta.version>
+        <lyra.version>1.2.9</lyra.version>
         <!-- plugins -->
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <maven-resources-plugin.version>3.1.0</maven-resources-plugin.version>

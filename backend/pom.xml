@@ -20,8 +20,8 @@
         <postgresql.version>42.2.12</postgresql.version>
         <spring.boot.version>2.1.8.RELEASE</spring.boot.version>
         <spring.boot.starter.celesta.version>2.1.20</spring.boot.starter.celesta.version>
-        <celesta.version>7.3.8</celesta.version>
-        <lyra.version>1.2.12</lyra.version>
+        <celesta.version>7.3.9</celesta.version>
+        <lyra.version>1.2.13</lyra.version>
         <!-- plugins -->
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <maven-resources-plugin.version>3.1.0</maven-resources-plugin.version>

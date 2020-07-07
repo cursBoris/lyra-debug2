@@ -26,7 +26,7 @@ module.exports = {
                 locales: ["en", "ru"],
                 //noConsole: true
             }),
-            new CopyWebpackPlugin([{
+            new CopyWebpackPlugin({
                 patterns: [
                     {
                         context: "node_modules",
@@ -34,7 +34,7 @@ module.exports = {
                         to: "dojo/resources"
                     }
                 ]
-            }]),
+            }),
         ],
 
         optimization: {

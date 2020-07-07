@@ -27,9 +27,13 @@ module.exports = {
                 //noConsole: true
             }),
             new CopyWebpackPlugin([{
-                context: "node_modules",
-                from: "dojo/resources/blank.gif",
-                to: "dojo/resources"
+                patterns: [
+                    {
+                        context: "node_modules",
+                        from: "dojo/resources/blank.gif",
+                        to: "dojo/resources"
+                    }
+                ]
             }]),
         ],
 

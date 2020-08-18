@@ -18,7 +18,7 @@
     "lyra-grid": "^1.2.25"
   },
   "devDependencies": {
-    "@vue/cli-service": "^4.5.3",
+    "@vue/cli-service": "^4.5.4",
     "node-sass": "^4.14.1",
     "sass-loader": "^9.0.3",
     "vue-template-compiler": "^2.6.11",

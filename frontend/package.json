@@ -15,14 +15,14 @@
     "vue": "^2.6.12",
     "vue-router": "^3.4.3",
     "bootstrap-vue": "^2.16.0",
-    "lyra-grid": "^1.2.25"
+    "lyra-grid": "^1.2.26"
   },
   "devDependencies": {
     "@vue/cli-service": "^4.5.4",
     "node-sass": "^4.14.1",
     "sass-loader": "^9.0.3",
     "vue-template-compiler": "^2.6.12",
-    "dojo-webpack-plugin": "^2.8.16",
+    "dojo-webpack-plugin": "^2.8.17",
     "copy-webpack-plugin": "^6.0.3",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.7.0",

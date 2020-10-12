@@ -20,12 +20,12 @@
   "devDependencies": {
     "@vue/cli-service": "^4.5.7",
     "node-sass": "^4.14.1",
-    "sass-loader": "^10.0.2",
+    "sass-loader": "^10.0.3",
     "vue-template-compiler": "^2.6.12",
     "dojo-webpack-plugin": "^2.8.18",
-    "copy-webpack-plugin": "^6.2.0",
+    "copy-webpack-plugin": "^6.2.1",
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.10.0",
+    "eslint": "^7.11.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-vue": "^7.0.1"

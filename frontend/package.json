@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "vue": "^2.6.12",
-    "vue-router": "^3.4.8",
+    "vue-router": "^3.4.9",
     "bootstrap-vue": "^2.18.1",
     "lyra-grid": "^1.2.31"
   },

@@ -18,12 +18,12 @@
     "lyra-grid": "^1.2.31"
   },
   "devDependencies": {
-    "@vue/cli-service": "^4.5.8",
+    "@vue/cli-service": "^4.5.9",
     "node-sass": "^5.0.0",
     "sass-loader": "^10.1.0",
     "vue-template-compiler": "^2.6.12",
     "dojo-webpack-plugin": "^2.8.18",
-    "copy-webpack-plugin": "^6.3.0",
+    "copy-webpack-plugin": "^6.3.2",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.13.0",
     "eslint-config-airbnb-base": "^14.2.1",

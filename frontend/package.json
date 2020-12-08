@@ -23,7 +23,7 @@
     "sass-loader": "^10.1.0",
     "vue-template-compiler": "^2.6.12",
     "dojo-webpack-plugin": "^2.8.18",
-    "copy-webpack-plugin": "^6.3.2",
+    "copy-webpack-plugin": "^6.4.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.15.0",
     "eslint-config-airbnb-base": "^14.2.1",

@@ -14,8 +14,8 @@
   "dependencies": {
     "vue": "^2.6.12",
     "vue-router": "^3.4.9",
-    "bootstrap-vue": "^2.20.1",
-    "lyra-grid": "^1.2.35"
+    "bootstrap-vue": "^2.21.0",
+    "lyra-grid": "^1.2.36"
   },
   "devDependencies": {
     "@vue/cli-service": "^4.5.9",
@@ -23,7 +23,7 @@
     "sass-loader": "^10.1.0",
     "vue-template-compiler": "^2.6.12",
     "dojo-webpack-plugin": "^2.8.18",
-    "copy-webpack-plugin": "^6.4.0",
+    "copy-webpack-plugin": "^7.0.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.15.0",
     "eslint-config-airbnb-base": "^14.2.1",

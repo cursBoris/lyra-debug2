@@ -18,7 +18,7 @@
         <java.version>1.8</java.version>
         <!-- dependencies -->
         <postgresql.version>42.2.18</postgresql.version>
-        <spring.boot.version>2.4.1</spring.boot.version>
+        <spring.boot.version>2.4.2</spring.boot.version>
         <spring.boot.starter.celesta.version>2.1.37</spring.boot.starter.celesta.version>
         <celesta.version>7.3.30</celesta.version>
         <lyra.version>1.2.40</lyra.version>
